@@ -1,0 +1,42 @@
+  html, body,
+  #map-canvas {
+    height: 100%;
+    }
+#pano {
+    height: 100%;
+    margin: 3% 0 3% 0;
+}
+    
+body {
+    padding: 3%;
+}
+
+#results {
+    height: 100%;
+    max-height: 600px;
+    overflow: scroll;
+    width: 100%;
+    border: 0px 1px solid #000;
+}
+
+.instalist li {
+    list-style-type: none;
+    display: inline;
+}
+
+
+.instacaption {
+    font-family: Helvetica, sans-serif;
+    padding: 2%;
+    font-size: .8em;
+    width: 100%;
+    background-color: #eee;
+    margin-top: 2em;
+    float: left;
+    display: none;
+
+}
+
+.instapicture {
+    
+}
