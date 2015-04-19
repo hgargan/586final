@@ -9,6 +9,8 @@
    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
       
 <script src="instagram.js" type="text/javascript"></script>
+<script src="loadmarkers.js" type="text/javascript"></script>
+<script src="downloadURL.js" type="text/javascript"></script>
 <script>
 
       // this function could be called anything
@@ -18,13 +20,71 @@ function initialize2 () {
     var mapOptions = {
     center: skyline,
     zoom: 11,
-    scrollwheel: false
+    scrollwheel: false,
+    panControl: true,
+    zoomControl: true,
+    mapTypeId: google.maps.MapTypeId.TERRAIN
   };
-  var map = new google.maps.Map(
+  geocoder = new google.maps.Geocoder();
+  infoWindow = new google.maps.InfoWindow;
+  map = new google.maps.Map(
       document.getElementById('map-canvas'), mapOptions);
+  
+  xmlUrl = "markers.xml";
+  
+  loadMarkers();
+
+  /*
+  var marker2 = new google.maps.Marker({
+          position: BigMeadows,
+          map: map,
+          title: 'Big Meadows'
+        });
+  
+  var marker1 = new google.maps.Marker({
+          position: TannersRidge,
+          map: map,
+          title: 'Tanners Ridge'
+        });
+  
+  var marker3 = new google.maps.Marker({
+          position: RipRap,
+          map: map,
+          title: 'Riprap Overlook'
+        });
+  var marker4 = new google.maps.Marker({
+          position: OldRag,
+          map: map,
+          title: 'Old Rag Mountain Summit'
+        });
+ var marker5 = new google.maps.Marker({
+          position: CalfMtn,
+          map: map,
+          title: 'Calf Mountain Overlook'
+        });
+  var marker6 = new google.maps.Marker({
+          position: Pinnacles,
+          map: map,
+          title: 'Pinnacles Overlook'
+        });
+  var marker7 = new google.maps.Marker({
+          position: SpitlerKnoll,
+          map: map,
+          title: 'Spitler Knoll'
+        });
+  var marker8 = new google.maps.Marker({
+          position: Hawksbill,
+          map: map,
+          title: 'Hawksbill Mountain Summit'
+        });
+  var marker9 = new google.maps.Marker({
+          position: StonyMan,
+          map: map,
+          title: 'Stony Man Overlook'
+        });*/
+  
   var panoramaOptions = {
-    position: skyline,
-    
+    position: skyline, 
     pov: {
       heading: 90,
       pitch: 10
@@ -33,64 +93,54 @@ function initialize2 () {
   var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
   map.setStreetView(panorama);
       }
-
-/*
-
+      /*
+ 
+  var Hawksbill = new google.maps.LatLng(38.555384, -78.395017);
+  var Pinnacles = new google.maps.LatLng(38.622739, -78.323108);
+  var SpitlerKnoll = new google.maps.LatLng(38.546849, -78.415183);
+  var CrescentRock= new google.maps.LatLng(-25.363882,131.044922);
+  var RipRap = new google.maps.LatLng(38.160804, -78.773122);
+  var RangeView = new google.maps.LatLng(38.764382, -78.227292);
+  var StonyMan = new google.maps.LatLng(38.610709, -78.363622);
+  var CalfMtn = new google.maps.LatLng(38.077689, -78.80262);
+  var TannersRidge= new google.maps.LatLng(38.516543, -78.443586);
+  var BigMeadows = new google.maps.LatLng(38.518553, -78.433203);
+  var ThoroughfareMtn = new google.maps.LatLng(25.363882,131.044922);
+  var OldRag = new google.maps.LatLng(38.551864, -78.315667);  
+  
         
+/*
+  
       var contentString = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Chapel Hill</h1>'+
+      '<h1 id="firstHeading" class="firstHeading">Tanners Ridge</h1>'+
       '<div id="bodyContent">'+
-      '<p><b>Chapel Hill</b> is a college town ' +
-      'in North Carolina.</p>'+
+      '<p><b>Tanners Ridge,</b> at an elevation of 3,465 feet, is among the highest overlooks in the park. ' +
       '</div>'+
       '</div>';
       
-      var contentString2 = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Chapel Thrill</h1>'+
-      '<div id="bodyContent">'+
-      '<p><b>Chapel Hill</b> is a college town ' +
-      'in North Carolina.</p>'+
-      '</div>'+
-      '</div>';
 
-  var infowindow = new google.maps.InfoWindow({
+  var TannersRidgeInfo = new google.maps.InfoWindow({
       content: contentString
-      
-  });
-  
-  var infowindow2 = new google.maps.InfoWindow({
-      content: contentString2
-      
+          
   });
         
         var marker = new google.maps.Marker({
-          position: myLatlng,
+          position: TannersRidge,
           map: map,
-          title: 'Chapel Hill'
+          title: 'Tanners Ridge'
         });
         
-        var marker2 = new google.maps.Marker({
-          position: myLatlng2,
-          map: map,
-          title: 'Chapel Thrill'
-        });
         
         
   google.maps.event.addListener(marker, 'click', function() {
-    infowindow.open(map,marker);
-    if (infowindow2) infowindow2.close();
+    TannersRidgeInfo.open(map,marker);
+    // if (infowindow2) infowindow2.close();
   });
   
-  google.maps.event.addListener(marker2, 'click', function() {
-    infowindow2.open(map,marker2);
-    if (infowindow) infowindow.close();
-    });*/
-
-  google.maps.event.addDomListener(window, 'load', initialize2);
+*/
+  google.maps.event.addDomListener(window, 'load', initialize2); 
       
   
     </script>
