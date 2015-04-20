@@ -1,13 +1,7 @@
-// JavaScript Document
 
-
-//Use this url below to get your access token
-//https://instagram.com/oauth/authorize/?display=touch&client_id=15a728572bfb4ee59febfa625d0d6655&redirect_uri=http://henrygargan.com/586final&response_type=token 
-
-//if you need a user id for yourself or someone else use:
-//http://jelled.com/instagram/lookup-user-id
 <html>
 <head>
+	<script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
   <script>
     
 $(function() {
@@ -37,19 +31,6 @@ $(function() {
 				html += '<p class="instacaption"><a href="http://instagram.com/' + data.user.username +'" target=_"blank>' + data.user.username + '</a>: ' + data.caption.text +'</p>';
 				html += '<a href="' + data.link + '" target=_"blank"><img src ="' + data.images.low_resolution.url + '"></a>'
 				
-					$(this).qtip({ // 
-					content: {
-					    text: data.caption.text // WILL work, because .each() sets "this" to refer to each element
-					},
-					position: {
-					   my: 'bottom right',
-					   at: 'top right',
-					},
-					   style: {
-					   classes: 'qtip-bootstrap qtip-shadow'
-					   }
-					   
-				   });
 					html += '</div>'
 					html += '</div>'
 				   });

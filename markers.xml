@@ -7,7 +7,7 @@
     <marker id="5" name="Range View Mountain" lat="38.764382" lng="-78.227292" description = "Testing"/>
     <marker id="6" name="Stony Man Overlook" lat="38.610709" lng="-78.363622" description = "Testing"/>
     <marker id="7" name="Calf Mountain Overlook" lat="38.077689" lng="-78.80262" description = "Testing"/>
-    <marker id="8" name="Big Meadows" lat="38.518553" lng="-78.433203" description = "Testing"/>
+    <marker id="8" name="Big Meadows" lat="" lng="-78.436875" description = "Testing"/>
     <marker id="9" name="Old Rag Mountain Summit" lat="38.551864" lng="-78.315667" description = "Testing"/>
     
 </markers>
