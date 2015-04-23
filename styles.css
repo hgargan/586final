@@ -10,7 +10,6 @@
 body {
     padding: 3%;
     background-color: #4F8173;
-    font-size: 1.6em;
     font-family: 'Bitter', serif;
     
 }
@@ -30,6 +29,8 @@ header {
     min-width: 375px;
     color: #eee;
     margin: 5% 0 2% 0;
+    font-size: 125%;
+    
     
 }
 
@@ -38,6 +39,7 @@ footer {
     border-top: 3px solid #000;
     padding: 1%;
     background-color: #eee;
+    font-size: .7em;
     
 }
 
@@ -62,7 +64,7 @@ h1 {
 
 #twitter-column {
     height: 100%;
-    min-height: 1029px;
+    min-height: 991px;
     background-color: #eee;
 }
 
@@ -88,13 +90,15 @@ h1 {
     max-height: 60px;
     min-height: 60px;
     margin-bottom: -1em;
-    
 
     
+   
 
-    
 
+}
 
+.instacaption p{
+    font-size: .8em;
 }
 .instapicture {
   margin-bottom: 2em;

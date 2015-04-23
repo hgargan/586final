@@ -1,38 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- css -->
     <link href="bootstrap.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" type="text/css"/>
-    <link href="jquery.qtip.css" rel="stylesheet" type="text/css"/>
+   <!-- font imports -->
     <link href='http://fonts.googleapis.com/css?family=Stalemate' rel='stylesheet' type='text/css'>
       <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+      <!-- jquery -->
     <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
-   <script src="jquery.qtip.js" type="text/javascript"></script>
+    <!-- maps import -->
    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>    
-<!--<script src="instagram.js" type="text/javascript"></script>-->
+<!--local scripts -->
 <script src="loadmarkers.js" type="text/javascript"></script>
 <script src="downloadURL.js" type="text/javascript"></script>
 <script src="instagram.js" type="text/javascript"></script>
-<script type="text/javascript" charset="utf-8">
-  $(document).ready(function() {
-    console.log('DOM Ready');
-     $('#title2 a').click(function() {
-	var url=$(this).attr('href');
-	$('#results2').load(url);
-	return false;
- 
-    });
-     
-  });
-
-    </script>
-</script>
 <script>
 
-      // this function could be called anything
+
 function initialize2 () {
     var mapOptions = {
-    center: BigMeadows,
+    center: OldRag,
     zoom: 10,
     scrollwheel: true,
     panControl: true,
@@ -48,59 +36,12 @@ function initialize2 () {
   
   loadMarkers();
 
-  /*
-  var marker2 = new google.maps.Marker({
-          position: BigMeadows,
-          map: map,
-          title: 'Big Meadows'
-        });
-  
-  var marker1 = new google.maps.Marker({
-          position: TannersRidge,
-          map: map,
-          title: 'Tanners Ridge'
-        });
-  
-  var marker3 = new google.maps.Marker({
-          position: RipRap,
-          map: map,
-          title: 'Riprap Overlook'
-        });
-  var marker4 = new google.maps.Marker({
-          position: OldRag,
-          map: map,
-          title: 'Old Rag Mountain Summit'
-        });
- var marker5 = new google.maps.Marker({
-          position: CalfMtn,
-          map: map,
-          title: 'Calf Mountain Overlook'
-        });
-  var marker6 = new google.maps.Marker({
-          position: Pinnacles,
-          map: map,
-          title: 'Pinnacles Overlook'
-        });
-  var marker7 = new google.maps.Marker({
-          position: SpitlerKnoll,
-          map: map,
-          title: 'Spitler Knoll'
-        });
-  var marker8 = new google.maps.Marker({
-          position: Hawksbill,
-          map: map,
-          title: 'Hawksbill Mountain Summit'
-        });
-  var marker9 = new google.maps.Marker({
-          position: StonyMan,
-          map: map,
-          title: 'Stony Man Overlook'
-        });*/
+
   
   var panoramaOptions = {
-    position: BigMeadows, 
+    position: OldRag, 
     pov: {
-      heading: 180,
+      heading: 270,
       pitch: 10
     }
   };
@@ -115,33 +56,7 @@ function initialize2 () {
   
         
 /*
-  
-      var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Tanners Ridge</h1>'+
-      '<div id="bodyContent">'+
-      '<p><b>Tanners Ridge,</b> at an elevation of 3,465 feet, is among the highest overlooks in the park. ' +
-      '</div>'+
-      '</div>';
-      
 
-  var TannersRidgeInfo = new google.maps.InfoWindow({
-      content: contentString
-          
-  });
-        
-        var marker = new google.maps.Marker({
-          position: TannersRidge,
-          map: map,
-          title: 'Tanners Ridge'
-        });
-        
-        
-        
-  google.maps.event.addListener(marker, 'click', function() {
-    TannersRidgeInfo.open(map,marker);
-    // if (infowindow2) infowindow2.close();
   });
   
 */
@@ -166,7 +81,7 @@ function initialize2 () {
     <a name="top"></a>
     <header><h1>Drive Shenandoah</h1>
       
-    <p>Skyline Drive runs along the ridge of the Shenandoah Mountains in Shenandoah National Park. This 105-mile-long reaches an elevation of nearly 3,700 feet as it dips and dives over gaps, through tunnels and past meadows.
+    <p>Skyline Drive runs along the ridge of the Shenandoah Mountains in Shenandoah National Park. This 105-mile-long road reaches an elevation of nearly 3,700 feet as it dips and dives over gaps, through tunnels and past meadows.
     Nearby, the world-famous Appalachian Trail follows a similar route.</p>
     <p>To explore the route, click on the waypoints and drag the little yellow man on top of them to learn more about points of interest and explore this drive's amazing views. </p></header>
      <div class ="row">
@@ -175,16 +90,16 @@ function initialize2 () {
         <div id="map-canvas" style="width: 100%; height: 100%; min-height: 600px"></div>
       </div>
       <div class="col-xs-12 col-md-3">
-        <h2>TWITTER</h2><div id="twitter-column"><iframe "twitter/index.php"></iframe></div>
+        <h2>Visitor Tweets</h2><div id="twitter-column"><iframe src="twitter/index.php"></iframe></div>
       </div>
      </div>
      
     <div class="row">
         <div class="col-xs-12 col-md-6">
-         <h2>INSTAGRAM FEED</h2> <div id="results"></div>
+         <h2>Instagram Feed</h2> <div id="results"></div>
         </div>
         <div class="col-xs-12 col-md-6">
-        <h2>ELEVATION GRAPH</h2><iframe class="elevation" scrolling="no" src="elevationtest2.html"></iframe>
+        <h2>Elevation Graph</h2><iframe class="elevation" scrolling="no" src="elevation.html"></iframe>
     </div>
 
 
