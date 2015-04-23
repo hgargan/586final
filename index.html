@@ -10,6 +10,7 @@
 <!--<script src="instagram.js" type="text/javascript"></script>-->
 <script src="loadmarkers.js" type="text/javascript"></script>
 <script src="downloadURL.js" type="text/javascript"></script>
+<script src="instagram.js" type="text/javascript"></script>
 <script type="text/javascript" charset="utf-8">
   $(document).ready(function() {
     console.log('DOM Ready');
@@ -30,8 +31,8 @@
 function initialize2 () {
     var mapOptions = {
     center: BigMeadows,
-    zoom: 11,
-    scrollwheel: false,
+    zoom: 10,
+    scrollwheel: true,
     panControl: true,
     zoomControl: true,
     mapTypeId: google.maps.MapTypeId.TERRAIN
@@ -150,31 +151,43 @@ function initialize2 () {
   </head>
   
   <body>
-    <h1>EXPLORE SHENANDOAH</h1>
-    <p>Skyline Drive runs along the ridge of the Shenandoahs in Shenandoah National Park. This 105-mile-long road reaches an elevation of nearly 4,000 feet as it passes over gaps, through tunnels and past meadows.</p>
-    <p>To explore the route, click on points on the map to learn about the drive's features and see some of its spectacular views. </p>
+  
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <ul class="nav navbar-nav">
+    <li><a href="http://www.nps.gov/shen/index.htm" target="_blank">Park Website</a></li>
+    <li><a href="http://www.nps.gov/shen/planyourvisit/upload/whole_park.pdf" target="_blank">Driving Map</a></li>
+    <li><a href="http://www.nps.gov/shen/learn/historyculture/skylinedrive.htm" target="_blank">Skyline Drive's History</a></li>
+    </ul>
+  </div>
+</nav>
+    <a name="top"></a>
+    <header><h1>DRIVE SHENANDOAH</h1>
+      
+    <p>Skyline Drive runs along the ridge of the Shenandoah Mountains in Shenandoah National Park. This 105-mile-long road dips and dives between 2,000 and 4,000 feet as it takes sightseers over gaps, through tunnels and past meadows.
+    Nearby, the world-famous Appalachian Trail follows a similar route.</p>
+    <p>To explore the route, click on the waypoints and drag the little yellow man on top of them to learn more about points of interest and explore this drive's amazing views. </p></header>
      <div class ="row">
       <div class="col-xs-12 col-md-9">
-        <div id="map-canvas" style="width: 100%; height: 100%; min-height: 600px"></div>
         <div id="pano" style="width: 100%; height: 100%; min-height: 400px;"></div>
+        <div id="map-canvas" style="width: 100%; height: 100%; min-height: 600px"></div>
       </div>
       <div class="col-xs-12 col-md-3">
-        <div id="twitter-column">Lorem ipsum</div>
+        <div id="twitter-column"><h2>TWITTER</h2><iframe "twitter/index.php"></iframe></div>
       </div>
      </div>
+     
     <div class="row">
-        <div class="col-xs-12 col-sm-6">
-         <div id="title2"><a href="instagram.html"><h2>INSTAGRAM FEED</h2></a></div>
+        <div class="col-xs-12 col-md-6">
+         <h2>INSTAGRAM FEED</h2> <div id="results"></div>
         </div>
-        <div class="col-xs-12 col-sm-6">
-          <div id="title2"><a href="index.php"><h2>TWITTER</h2></a>
-            <iframe src="twitter/index.php"></iframe>
-          </div>
-        </div>
+        <div class="col-xs-12 col-md-6">
+        <h2>ELEVATION GRAPH</h2><iframe class="elevation" scrolling="no" src="elevationtest2.html"></iframe>
     </div>
-  <div id="results2">
+
 
   </div>
+    <footer>By Henry Gargan<br>Made for Stephen King's JOMC 586 course, Spring 2015.<p id="back-to-top"><a href="#top">Back to top</a></p></footer>
   </body>
 </html>
 

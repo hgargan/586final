@@ -1,14 +1,4 @@
-// JavaScript Document
 
-
-//Use this url below to get your access token
-//https://instagram.com/oauth/authorize/?display=touch&client_id=15a728572bfb4ee59febfa625d0d6655&redirect_uri=http://henrygargan.com/586final&response_type=token 
-
-//if you need a user id for yourself or someone else use:
-//http://jelled.com/instagram/lookup-user-id
-<html>
-<head>
-  <script>
     
 $(function() {
 	
@@ -32,24 +22,11 @@ $(function() {
 			html+= '<div class="row">'
 			$.each(json.data,function(i,data){
 
-				html += '<div class="col-xs-12 col-sm-4 col-md-3">'
+				html += '<div class="col-xs-12 col-sm-6">'
 				html += '<div class="instapicture">'
-				html += '<p class="instacaption"><a href="http://instagram.com/' + data.user.username +'" target=_"blank>' + data.user.username + '</a>: ' + data.caption.text +'</p>';
+				html += '<p class="instacaption"><a href="http://instagram.com/' + data.user.username +'" target=_"blank>' + data.user.username + '</a>: ' + data.caption.text + '</p>';;
 				html += '<a href="' + data.link + '" target=_"blank"><img src ="' + data.images.low_resolution.url + '"></a>'
 				
-					$(this).qtip({ // 
-					content: {
-					    text: data.caption.text // WILL work, because .each() sets "this" to refer to each element
-					},
-					position: {
-					   my: 'bottom right',
-					   at: 'top right',
-					},
-					   style: {
-					   classes: 'qtip-bootstrap qtip-shadow'
-					   }
-					   
-				   });
 					html += '</div>'
 					html += '</div>'
 				   });
@@ -70,11 +47,7 @@ $(function() {
                
  });
  
- </script>
- </head>
- <body>
- <div id="results"></div>
- </body>
- </html>
+
+
 		
 	

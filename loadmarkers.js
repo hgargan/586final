@@ -28,12 +28,13 @@ function downloadUrl(url,callback) {
             var point = new google.maps.LatLng(
                 parseFloat(markers[i].getAttribute("lat")),
                 parseFloat(markers[i].getAttribute("lng")));
-            var html = "<div class='infowindow'><p><b>" + name + "</b><p></div><p>" + description + "</p>";
+            var html = "<div class='infowindow'><p><b>" + name + "</b><p></div><p>Elevation: " + description + " ft.</p>" ;
             var marker = new google.maps.Marker({
               map: map,
               position: point, 
               title: name,
-              content: html
+              content: html 
+
             });
         
             google.maps.event.addListener(marker, 'click', function() {

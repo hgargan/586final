@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <markers>
-    <marker id="1" name="Riprap Overlook" lat="38.160804" lng="-78.773122" description = "Testing" />
-    <marker id="2" name="Tanners Ridge" lat="38.516543" lng="-78.443586" description = "Testing"/>
-    <marker id="3" name="Hawksbill Summit" lat="38.555384" lng="-78.395017" description = "Testing"/>
-    <marker id="4" name="Spitler Knoll" lat="38.546849" lng="-78.415183" description = "Testing"/>
-    <marker id="5" name="Range View Mountain" lat="38.764382" lng="-78.227292" description = "Testing"/>
-    <marker id="6" name="Stony Man Overlook" lat="38.610709" lng="-78.363622" description = "Testing"/>
+    <marker id="1" name="Riprap Overlook" lat="38.160804" lng="-78.773122" description = "2920" />
+    <marker id="2" name="Tanners Ridge" lat="38.516543" lng="-78.443586" description = "3465"/>
+    <marker id="3" name="Hawksbill Summit" lat="38.555384" lng="-78.395017" description = "4049"/>
+    <marker id="4" name="Spitler Knoll" lat="38.546849" lng="-78.415183" description = "3285"/>
+    <marker id="5" name="Range View Overlook" lat="38.764382" lng="-78.227292" description = "2180"/>
+    <marker id="6" name="Stony Man Overlook" lat="38.610709" lng="-78.363622" description = "3100"/>
     <marker id="7" name="Calf Mountain Overlook" lat="38.077689" lng="-78.80262" description = "Testing"/>
-    <marker id="8" name="Big Meadows" lat="" lng="-78.436875" description = "Testing"/>
-    <marker id="9" name="Old Rag Mountain Summit" lat="38.551864" lng="-78.315667" description = "Testing"/>
-    
+    <marker id="8" name="Big Meadows" lat="38.517181" lng="-78.436875" description = "2460"/>
+    <marker id="9" name="Old Rag Mountain Summit" lat="38.551864" lng="-78.315667" description = "3284"/>
+    <marker id="10" name="South River Overlook" lat="38.383891" lng="-78.517522" description = "2950"/>
+    <marker id="11" name="Loft Mountain Overlook" lat="38.287032" lng="-78.628595" description = "Testing"/>
+    <marker id="12" name="Route 33 Intersection" lat="38.357723" lng="-78.545502" description = "To Elkton, Va."/>
+    <marker id="13" name="Route 33 Intersection" lat="38.661148" lng="-78.320888" description = "To Luray, Va."/>
+
+
 </markers>
