@@ -10,7 +10,8 @@
 <head>
   <link href="bootstrap.min.css" rel="stylesheet">
 <link href="styles.css" rel="stylesheet">
-
+  <link href='http://fonts.googleapis.com/css?family=Stalemate' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <title>Google Maps JavaScript API v3 Example: Elevation</title>
@@ -51,7 +52,7 @@
   function initialize() {
     var myLatlng = new google.maps.LatLng(15, 0);
     var myOptions = {
-      zoom: 11,
+      zoom: 12,
       scrollwheel: false,
       center: myLatlng,
       mapTypeId: google.maps.MapTypeId.TERRAIN
@@ -59,6 +60,7 @@
 
     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
     chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+    loadMarkers();
     
     geocoderService = new google.maps.Geocoder();
     elevationService = new google.maps.ElevationService();
@@ -87,7 +89,7 @@
   // and plots the elevation profile on a GViz ColumnChart
   function plotElevation(results) {
     elevations = results;
-    var elevationFeet = elevations * 3.2
+    var elevationFeet = elevations 
     var path = [];
     for (var i = 0; i < results.length; i++) {
       path.push(elevations[i].location);
@@ -104,9 +106,9 @@
     
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Example');
-    data.addColumn('number', 'Elevation in meters:');
+    data.addColumn('number', 'Elevation in feet:');
     for (var i = 0; i < results.length; i++) {
-      data.addRow(['', elevations[i].elevation]);
+      data.addRow(['', elevations[i].elevation*3.2808399]);
     }
 
     document.getElementById('chart_div').style.display = 'block';
@@ -114,7 +116,7 @@
       width: 512,
       height: 150,
       legend: 'none',
-      titleY: 'Elevation (m)',
+      titleY: 'Elevation (ft)',
       titleX: '105 miles',
       is3d: true,
       focusBorderColor: '#00ff00'
@@ -156,7 +158,7 @@
   
   // Add a marker and trigger recalculation of the path and elevation
   function addMarker(latlng, doQuery) {
-    if (markers.length < 10) {
+    if (markers.length < 100) {
       
       var marker = new google.maps.Marker({
         position: latlng,
@@ -174,7 +176,7 @@
         updateElevation();
       }
       
-      if (markers.length == 10) {
+      if (markers.length == 100) {
         document.getElementById('address').disabled = true;
       }
     } else {
@@ -299,12 +301,15 @@
     
     document.getElementById('chart_div').style.display = 'none';
   }
+  loadMarkers();
 
 </script>
+
 <style>
 body {
-  font-family: sans-serif
+  font-family: sans-serif;
   text-align: center;
+  font-family: 'Bitter', serif;
 }
 
 #map_canvas {
@@ -314,7 +319,7 @@ body {
   min-width: 617px;
 }
   #chart_div  {
-    margin-top: 5%;
+    margin-top: 6.5%;
     width: 100%;
     min-width: 617px;
     text-align: center;

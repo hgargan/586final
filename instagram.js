@@ -24,16 +24,17 @@ $(function() {
 
 				html += '<div class="col-xs-12 col-sm-6">'
 				html += '<div class="instapicture">'
-				html += '<p class="instacaption"><a href="http://instagram.com/' + data.user.username +'" target=_"blank>' + data.user.username + '</a>: ' + data.caption.text + '</p>';;
+				html += '<p class="instacaption"><a href="http://instagram.com/' + data.user.username +'" target=_"blank>' + data.user.username + '</a>: ' + data.caption.text + '</p>';
 				html += '<a href="' + data.link + '" target=_"blank"><img src ="' + data.images.low_resolution.url + '"></a>'
 				
 					html += '</div>'
 					html += '</div>'
+						
 				   });
 			
 
 			
-			
+		html += '<p><center><a href="https://instagram.com/explore/tags/shenandoahnationalpark" target="_blank">See more >></a></center></p>'
 			html+='</div>'
 			console.log(html);
 			$("#results").append(html);
